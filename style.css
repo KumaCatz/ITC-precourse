@@ -1,0 +1,221 @@
+/* basic all-encompassing attributes: */
+/* :root is used in javascript to change the background colors: */
+:root {
+    --bg-color: #DEF5E5;
+}
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: var(--bg-color);
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* header, including the background color button: */
+header {
+    text-align: center;
+}
+header > h1 {
+    background-color: #9DC08B;
+    border: solid 2px #EDF1D6;
+    border-right: 0;
+    border-left: 0;
+    margin-top: 21.44px;
+    margin-bottom: 21.44px;
+}
+#colorsBtn:hover {
+    animation: colorful 3s infinite;
+    border-radius: 5px;
+}
+@keyframes colorful {
+    0% {background-color: #E9E9ED}
+    33% {background-color: #DEF5E5}
+    66% {background-color: #FEDEFF}
+    100% {background-color: #E9E9ED}
+}
+
+
+/* navigation bar, all the links and their style: */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    border: 3px solid #9DC08B;
+    border-radius: 10px;
+    background-color: #EDF1D6;
+    padding-left: 0;
+    margin: 16px 5px 16px 5px;
+}
+.flex-container > li > a {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: #555;
+    border-radius: 10px;
+    border: 2.5px solid transparent;
+}
+.flex-container > li > a:hover {
+    background-color: #555;
+    color: white;
+    border: 2.5px solid #FAEDCD;
+}
+strong {
+    font-size: 27px;
+}
+/* making everything in it ocuppy the same size: */
+.flex-container > * {
+    flex: 1;
+}
+
+
+/* greetings-card, starting with the footer at the bottom: */
+.space-footer {
+    position: relative;
+    height: 100vh;
+}
+.profile-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 3px solid green;
+    background-color: #9DC08B;
+    border-radius: 10px;
+    width: 320px;
+    height: 360px;
+    margin: auto;
+    margin-top: 30px;
+}
+.profile-card > img {
+    margin-top: 13px;
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+h1 {
+    font-size: 24px;
+    margin-top: 18.76px;
+    margin-bottom: 5px;
+    color: #3c3b3b;
+}
+h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #3c3b3b;
+}
+.profile-card > .mini-links {
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+width: 40%;
+}
+.profile-card > .mini-links > a {
+    font-size: 30px;
+    color: #a97041;
+}
+/* animations: */
+@keyframes bright {
+    25%   {filter:brightness(180%)}
+    50%  {filter:brightness(180%)}
+    100% {filter:brightness(100%)}
+}
+.bright {
+    animation-name: bright;
+    animation-duration: 0.65s;
+}
+@keyframes blur {
+    0%{
+        filter:blur(0px);
+    }
+    50% {
+        filter:blur(5px) brightness(5%);
+    }
+    100% {
+        filter:blur(0px) brightness(100%);
+    }
+}
+.blur {
+    animation-name: blur;
+    animation-duration: 2s;
+}
+
+
+/* the footer style: */
+footer {
+position: absolute;
+border: solid 2px #9DC08B;
+width:100%;
+border-right: 0;
+border-left: 0;
+bottom: 0;
+background-color: #EDF1D6;
+}
+
+
+/* the form style: */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+}
+fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 20vw;
+}
+textarea {
+    flex: .5;
+}
+
+
+/* about page: */
+.about {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.brief {
+    margin: 32px 10px 32px 10px;
+    text-align: center;
+}
+section {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 16px 10px 32px 10px;
+}
+section > div {
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+}
+/*buttons for the map, squishing the div and styling: */
+section > div:nth-of-type(3) {
+    flex: 1;
+}
+.map-buttons > button {
+    margin: 8px 8px 8px 8px;
+    font-size: 18px;
+}
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+}

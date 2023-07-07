@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/cc2158c6e6.js" crossorigin="anonymous"></script>
+    <title>Contact</title>
+
+</head>
+<body>
+
+    <nav>
+        <ul class="flex-container">
+            <li><a href="../index.html" title="stay safe, godspeed! :)">The heart is where<div><strong>Home</strong></div>is...</a></li>
+            <li><a href="./about.html" title="omg so cute *-*">Do you wanna know<div><strong>About</strong></div>me?</a></li>
+            <li><a href="./contact.html" title="like, blush! xD">Let's get in<div><strong>Contact</strong></div>with!</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Who are you?</h1>
+        <button id="colorsBtn">*change the mood*</button>
+    </header>
+
+    <div class="space-footer">
+        <!-- going to my email: -->
+        <form id="form" method="POST" action="https://formspree.io/f/xoqbgroj">
+
+            <fieldset>
+                <legend title="it's cute :3">Let's exchange email letters!</legend>
+                <p>* required input fields</p>
+                <label for="first-name">*First name:</label>
+                <input type="text" id="first-name" name="first-name">
+
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" name="last-name">
+
+                <label for="email">*Email address:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="comments">*Comments:</label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <label for="file">*Select a file to add:</label>
+                <input type="file" id="file" name="file">
+
+                <button type="submit" id="submit">Submit!</button>
+            </fieldset>
+        </form>
+
+        <footer>
+        </footer>
+
+    </div>
+
+    <script src="../js/formValidation.js"></script>
+    <script src="../js/colors.js"></script>
+    <script src="../js/footer.js"></script>
+</body>
+</html>
